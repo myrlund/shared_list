@@ -1,0 +1,24 @@
+- title @list.title
+
+%p
+  = @list.description
+%p
+  Owner:
+  = @list.owner
+
+%h3 Items
+%ul
+  - for item in @list.items.relevant
+    %li
+      = link_to item.title, [@list, item]
+
+%h3 Subscribers
+%ul
+  - for user in @list.subscribers
+    %li
+      = link_to user, user
+
+%p
+  = link_to "Edit", edit_list_path(@list)
+  = link_to "Destroy", @list, :confirm => 'Are you sure?', :method => :delete
+  = link_to "View All", lists_path

@@ -1,0 +1,21 @@
+<% title "Lists" %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>User</th>
+  </tr>
+  <% for list in @lists %>
+    <tr>
+      <td><%= list.title %></td>
+      <td><%= list.description %></td>
+      <td><%= list.owner %></td>
+      <td><%= link_to "Show", list %></td>
+      <td><%= link_to "Edit", edit_list_path(list) %></td>
+      <td><%= link_to "Destroy", list, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New List", new_list_path %></p>
