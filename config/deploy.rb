@@ -10,8 +10,8 @@ set :rails_env,       "production"
 set :deploy_to,       "/srv/www/danseku.no/lists"
 set :normalize_asset_timestamps, false
 
-set :user,            "deploy"
-set :group,           "www-data"
+set :user,            "jonas"
+set :group,           "rvm"
 set :use_sudo,        false
 
 role :web, "login.danseku.no"
@@ -30,9 +30,9 @@ default_environment["RAILS_ENV"] = 'production'
 
 
 # Use our ruby-1.9.2-p290 gemset
-default_environment["PATH"]         = "--"
-default_environment["GEM_HOME"]     = "--"
-default_environment["GEM_PATH"]     = "--"
+# default_environment["PATH"]         = "--"
+# default_environment["GEM_HOME"]     = "--"
+# default_environment["GEM_PATH"]     = "--"
 default_environment["RUBY_VERSION"] = "ruby-1.9.2-p0"
 
 default_run_options[:shell] = 'bash'
