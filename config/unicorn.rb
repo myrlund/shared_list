@@ -26,10 +26,10 @@ if env == "production"
 
   # feel free to point this anywhere accessible on the filesystem
   user 'www-data', 'www-data'
-  shared_path = "/srv/www/danseku.no/lists/shared"
+  shared_path = "/srv/www/danseku.no/lists"
 
-  stderr_path "#{shared_path}/log/unicorn.stderr.log"
-  stdout_path "#{shared_path}/log/unicorn.stdout.log"
+  stderr_path "#{shared_path}/logs/unicorn.stderr.log"
+  stdout_path "#{shared_path}/logs/unicorn.stdout.log"
 end
 
 before_fork do |server, worker|
