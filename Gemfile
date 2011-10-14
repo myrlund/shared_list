@@ -22,7 +22,7 @@ gem 'formtastic'
 
 gem 'nifty-generators', :group => :development
 gem 'authlogic'
-gem 'cancan'
+gem 'cancan', '~> 1.6.7'
 
 # Use unicorn as the web server
 gem 'unicorn'
